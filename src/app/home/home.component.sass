@@ -1,15 +1,26 @@
 .banner
     width: 100%
-    height: 620px
+    height: 480px
     background-image: url(../../assets/img/bg-banner.jpg)
     background-size: cover
+    background-attachment: fixed
+    position: relative
+.banner__content
     display: flex
     align-items: center
     justify-content: center
     flex-direction: column
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgb(0,0,0)
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4766281512605042) 100%)
+
 .banner__title
     color: #fff
-    font-family: Arial,Helvetica,sans-serif
+    font-family: 'Cinzel', serif
     font-size: 3em
     padding: 40px
     max-width: 75%
@@ -35,4 +46,151 @@
         transform: scale(.9)
 .hp-first-session
     width: 90%
-    margin: 0px auto
+    margin: 40px auto
+    display: flex
+    justify-content: space-between
+.hp-first-session__info
+    background: #f0f0f0
+    padding: 90px 60px
+    margin-right: 35px
+.hp-first-session__info-title
+    font-family: Arial,Helvetica,sans-serif
+    font-weight: 100
+    letter-spacing: -1px
+    font-size: 2.8em
+    line-height: 1.2em
+    text-transform: uppercase
+    color: #333
+    margin-bottom: 40px
+.hp-first-session__info-text
+    font-size: 28px
+    color: #555 
+.hp-first-session__info-btn
+    padding: 10px 15px
+    font-size: 1.2em
+    margin-top: 20px
+    cursor: pointer
+    border: none
+    background: #ddd
+.hp-first-session__img
+    width: 500px
+    height: 580px
+    object-fit: contain
+.hp-second-session
+    display: grid
+    width: 90%
+    margin: auto
+    grid-gap: 20px
+    grid-template-columns: 1fr 1fr 1fr
+    img 
+        width: 100%
+.hp-second-session__card
+    position: relative
+.hp-second-session__card-btn
+    position: absolute
+    bottom: 40px
+    left: 50%
+    transform: translateX(-50%)
+    text-decoration: none
+    background: #eee
+    padding: 15px
+    text-transform: uppercase
+    font-size: 1em
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, .1)
+    text-align: center
+    color: #000
+.hp-third-session
+    width: 90%
+    margin: 20px auto
+    background: #f0f0f0
+    padding: 50px
+.testimonios
+    margin: auto
+    // border: 3px solid green
+    text-align: center
+.testimonios__title
+    font-size: 2.2em
+    font-weight: normal
+    text-transform: uppercase
+    text-align: center
+    color: #3f3f3f
+    margin: 30px 0px
+    margin-bottom: 60px
+
+.testimonios__container-people
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 15px
+.testimonios__container-people-card-img
+    border-radius: 50%
+    margin-bottom: 30px
+.testimonios__container-people-card-name
+    font-family: Arial,Helvetica,sans-serif
+    color: #444
+    font-weight: normal
+    margin-bottom: 10px
+.testimonios__container-people-card-quote
+    font-family: 'Raleway', sans-serif
+    color: #777
+    margin-bottom: 10px
+.galeria
+    width: 90%
+    margin: auto
+.galeria__title
+    text-align: center
+    font-size: 2.3em
+    text-transform: uppercase
+    font-family: Arial,Helvetica,sans-serif
+    color: #555
+    font-weight: 100
+    margin: 60px 0px
+.galeria__container-imgs
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: ""
+    grid-gap: 20px
+.galeria__galeria_block
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "small1 small2 small3" "big big small4" "big big small4"
+    grid-gap: 20px
+    & > div
+        overflow: hidden
+        border: 1px solid #f0f0f0
+        cursor: pointer
+        position: relative
+        transition: all 1s ease
+        &::before
+            content: ""
+            position: absolute
+            display: block
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background: rgba(0,0,0,0.5)
+            display: none
+        &:hover::before
+            display: block        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+.small1
+    grid-column-start: small1
+    grid-column-end: small1
+.small2
+    grid-column-start: small2
+    grid-column-end: small2
+.small3
+    grid-column-start: small3
+    grid-column-end: small3
+.big
+    grid-column-start: big
+    grid-column-end: big
+.small4
+    grid-column-start: small4
+    grid-column-end: small4
+.small5
+    grid-column-start: small5
+    grid-column-end: small5
